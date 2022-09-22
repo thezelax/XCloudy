@@ -1,330 +1,207 @@
-@font-face {
-  font-family: QuicksandBold;
-  src: url(../font/QuicksandBold.woff);
+/* imports */
+
+@import "IncFont.css"; 
+
+/* global settings */
+
+:root{
+    --bg-col: #141925;
+    --child-col: #232e49c4;
+    --logo-col: #D9D9D9;
+    --logo-bottom-col: #4296d1;
+    --button-col: #191e2b;
+    --button-text-col: #D9D9D9;
 }
 
-@font-face {
-  font-family: Quicksand;
-  src: url(../font/Quicksand.woff);
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-@font-face {
-  font-family: ArimoSemiBold;
-  src: url(../font/ArimoSemiBold.woff);
+body {
+    background-color: var(--bg-col);
+    text-decoration:none;
 }
 
-@font-face {
-  font-family: GothamPro-Black;
-  src: url(../font/GothamPro-Black.woff);
+::-moz-selection {
+    color: var(--logo-bottom-col);
+    background: var(--bg-col);
 }
 
-@font-face {
-  font-family: GothamPro-BlackItalic;
-  src: url(../font/GothamPro-BlackItalic.woff);
+::selection {
+    color: var(--logo-bottom-col);
+    background: var(--bg-col);
 }
 
-@font-face {
-  font-family: GothamPro-Bold;
-  src: url(../font/GothamPro-Bold.woff);
+.shadow-blue{
+    text-shadow: 0px 0px 7px #08395c;
 }
 
-@font-face {
-  font-family: GothamPro-Medium;
-  src: url(../font/GothamPro-Medium.woff);
+/* top container */
+
+.top-container{
+    -webkit-box-shadow: 0 0 30px 1px #14222cc4 inset;
+    -moz-box-shadow: 0 0 30px 1px #14222cc4 inset;
+    box-shadow: 0 0 30px 1px #14222cc4 inset;
+
+    background-color: var(--child-col);
+    min-height: 100%;
+    border-radius: 5px;
+    height: calc(70px);
+    padding: 15px;
+    margin: 2% 20% 0 20%;
 }
 
-@font-face {
-  font-family: GothamPro;
-  src: url(../font/GothamPro.woff);
+.top-left{
+    display: flex;
+    box-sizing: border-box;
+    display: block;
+    float: left;
+    width: 60%;
 }
 
-.font_GothamPro{
-  font-family: GothamPro;
+.top-right{
+    float: right;
+    width: 40%;
 }
 
-.font_GothamProMedium{
-  font-family: GothamPro-Medium;
+.logo-color{
+    color: var(--logo-col);
+    font-family: QuicksandBold;
 }
 
-.font_GothamProBold{
-  font-family: GothamPro-Bold;
+.logo-bottom-color{
+    color: var(--logo-bottom-col);
+    font-family: QuicksandBold;
 }
 
-.font_GothamProBlackItalic{
-  font-family: GothamPro-BlackItalic;
+.img-style{
+    float: left;
+    margin: 2px 10px 2px 2px;
 }
 
-.font_GothamProBlack{
-  font-family: GothamPro-Black;
+.img-anim:hover {
+    -webkit-animation: flashing 1s ease 1;
+    animation: flashing 1s ease 1;
 }
 
-.hr1 {
-  display: block;
-  margin-top: 30px;
-  margin-bottom: 0.5em;
-  margin-left: 5%;
-  margin-right: 5%;
-  border-style: inset;
-  border-width: 1px;
+/* main container */
+
+.main-container{
+    -webkit-box-shadow: 0 0 30px 1px #14222cc4 inset;
+    -moz-box-shadow: 0 0 30px 1px #14222cc4 inset;
+    box-shadow: 0 0 30px 1px #14222cc4 inset;
+    
+    background-color: var(--child-col);
+    min-height: 100%;
+    border-radius: 5px;
+    padding: 15px 15px 10% 15px;
+    margin: 15px 20% 0 20%;
 }
 
-.hr2 {
-  display: block;
-  margin-top: 22%;
-  margin-bottom: 0.5em;
-  margin-left: 5%;
-  margin-right: 5%;
-  border-style: inset;
-  border-width: 1px;
+.promotion-container{
+    margin: calc(100px) 0 0 calc(20px);
+    padding: 50px 50px 50px 18%;
+    background-image: url(../img/Illustration.png);
+    background-repeat:no-repeat;
+    background-position: 75% 75%;
+    background-size: 30%;
 }
 
-body{
-  color: #D9D9D9;
+/* footer container */
+
+.footer-container{
+    -webkit-box-shadow: 0 0 30px 1px #14222cc4 inset;
+    -moz-box-shadow: 0 0 30px 1px #14222cc4 inset;
+    box-shadow: 0 0 30px 1px #14222cc4 inset;
+    
+    
+    display: flex;
+    box-sizing: border-box;
+    display: block;
+    background-color: var(--child-col);
+    min-height: 100%;
+    border-radius: 5px;
+    padding: 0 15px 10px 15px;
+    margin: 15px 20% 0 20%;
+    height: calc(80px);
 }
 
-.img_style{
-  display: block;
-  margin-top: 30px;
-  margin-bottom: 0.5em;
-  margin-left: 6%;
-  margin-right: 90%;
+.footer-center{
+    width: 100%;
 }
 
-.logo_text{
-  display: block;
-  font-family: QuicksandBold;
-  margin-top: -43px;
-  margin-bottom: 0.5em;
-  margin-left: 8.6%;
-  margin-right: 8.6%;
+/* button */
+
+.button-login{
+    border: none;
+    float: right;
+    color: var(--button-text-col);
+    background-color: var(--button-col);
+    font-family: ArimoSemiBold;
+    font-size: 90%;
+    padding: 10px;
+    border-radius: 10px;
+    opacity: 0.6;
+    transition: 0.3s;
 }
 
-.logo_text_alt{
-  display: block;
-  color: #D9D9D9;
-  font-family: Quicksand;
-  margin-top: -12px;
-  margin-bottom: 0.5em;
-  margin-left: 8.5%;
-  margin-right: 8.5%;
-}
-
-.button1{
-  display: block;
-  border: none;
-  color: #D9D9D9;
-  background-color: #272f42;
-  padding: 10px 20px;
-  font-family: ArimoSemiBold;
-  margin-top: -45px;
-  border-radius: 5px;
-  margin-bottom: 0.5em;
-  margin-left: 84%;
-  margin-right: 90px;
-  text-shadow: 2px 2px 4px #0000005b;
-  box-shadow: 1px 2px 10px #0000005b;
-  font-size: 14px;
-  opacity: 0.6;
-  transition: 0.3s;
-}
-
-.button1:hover{
-  opacity: 1;
-  display: block;
-  border: none;
-  color: rgb(224, 224, 224);
-  background-color: #385cb1;
-  padding: 10px 20px;
-  font-family: ArimoSemiBold;
-  margin-top: -45px;
-  border-radius: 10px;
-  text-shadow: 2px 2px 4px #000000;
-  box-shadow: 1px 2px 10px #08395c;
-  transform: translateY(-5px);
-  font-size: 14px;
-}
-
-.button2{
-  display: block;
-  border: none;
-  color: #D9D9D9;
-  background-color: transparent;
-  padding: 10px 20px;
-  font-family: ArimoSemiBold;
-  margin-top: -45px;
-  border-radius: 5px;
-  margin-bottom: 0.5em;
-  margin-left: 91%;
-  margin-right: 90px;
-  text-shadow: 2px 2px 4px #0000005b;
-  font-size: 20px;
-  opacity: 0.6;
-  transition: 0.3s;
-}
-
-.button2:hover{
-  opacity: 1;
-  display: block;
-  border: none;
-  color: rgb(224, 224, 224);
-  background-color: transparent;
-  padding: 10px 20px;
-  font-family: ArimoSemiBold;
-  margin-top: -45px;
-  border-radius: 10px;
-  text-shadow: 2px 2px 4px #000000;
-  transform: translateY(-5px);
-  font-size: 20px;
-}
-
-.logo-set-hover:hover {
-  -webkit-animation: flashing 3s ease 1;
-  animation: flashing 2s ease 1;
-}
-
-.buttondark{
-  display: block;
-  border: none;
-  appearance: none;
-  border:0px;
-  outline:0px;
-  color: #D9D9D9;
-  background-color: #272f42;
-  padding: 11px 35px;
-  font-family: ArimoSemiBold;
-  margin-top: -45px;
-  border-radius: 5px;
-  margin-bottom: 0.5em;
-  margin-left: 74%;
-  margin-right: 90px;
-  text-shadow: 2px 2px 4px #0000005b;
-  box-shadow: 1px 2px 10px #0000005b;
-  font-size: 14px;
-  opacity: 0.6;
-  transition: 0.3s;
-}
-
-.buttondark:hover {
-  opacity: 1;
-  display: block;
-  border: none;
-  appearance: none;
-  border:0px;
-  outline:0px;
-  color: rgb(224, 224, 224);
-  background-color: #272f42;
-  padding: 11px 35px;
-  font-family: ArimoSemiBold;
-  margin-top: -45px;
-  border-radius: 10px;
-  text-shadow: 2px 2px 4px #0000005b;
-  box-shadow: 1px 2px 10px #0000005b;
-  transform: translateY(-5px);
-  font-size: 14px;
+.button-login:hover{
+    border: none;
+    float: right;
+    color: var(--button-text-col);
+    background-color: transparent;
+    font-family: ArimoSemiBold;
+    font-size: 90%;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 1px #4296d1a9;
+    opacity: 1;
 }
 
 .button3{
-  display: block;
-  border: none;
-  appearance: none;
-  border:0px;
-  outline:0px;
-  color: #D9D9D9;
-  background-color: transparent;
-  border: 2px solid black;
-  padding: 11px 35px;
-  font-family: ArimoSemiBold;
-  margin-top: 10px;
-  border-radius: 5px;
-  margin-bottom: 0.5em;
-  margin-left: 0%;
-  margin-right: 90px;
-  text-shadow: 2px 2px 4px #0000005b;
-  border-color: #385cb1;
-  font-size: 14px;
-  opacity: 1;
-  transition: 0.3s;
+    display: block;
+    border: none;
+    appearance: none;
+    border:0px;
+    outline:0px;
+    color: #D9D9D9;
+    background-color: transparent;
+    border: 2px solid black;
+    padding: 11px 35px;
+    font-family: ArimoSemiBold;
+    margin-top: 10px;
+    border-radius: 5px;
+    margin-bottom: 0.5em;
+    margin-left: 0%;
+    margin-right: 90px;
+    text-shadow: 2px 2px 4px #0000005b;
+    border-color: #385cb1;
+    font-size: 14px;
+    opacity: 1;
+    transition: 0.3s;
 }
 
 .button3:hover {
-  display: block;
-  border: none;
-  appearance: none;
-  border:0px;
-  outline:0px;
-  color: #D9D9D9;
-  background-color: #385cb1;
-  border: 2px solid black;
-  padding: 11px 35px;
-  font-family: ArimoSemiBold;
-  margin-top: 10px;
-  border-radius: 5px;
-  margin-bottom: 0.5em;
-  margin-left: 0%;
-  margin-right: 90px;
-  text-shadow: 2px 2px 4px #0000005b;
-  box-shadow: 1px 2px 10px #08395c;
-  border-color: #385cb1;
-  font-size: 14px;
-  opacity: 1;
-}
-
-.div_style_1{
-  margin-left: 15%;
-  margin-right: 120px;
-  margin-top: 180px;
-}
-
-.div_style_2{
-  margin-left: 8%;
-  margin-top: 3%;
-}
-
-.div_style_3{
-  margin-left: 48%;
-  margin-top: -2.6%;
-}
-
-.div_style_4{
-  margin-left: 78%;
-  margin-top: -2.6%;
-}
-
-.text_shadow_blue{
-  text-shadow: 0px 0px 7px #08395c;
-}
-
-.text_shadow_gray{
-  text-shadow: 0px 0px 2px #D9D9D9;
-}
-
-a:link, a:visited {
-  background-color: transparent;
-  color: #d9d9d9de;
-  padding: 14px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  transition: 0.3s;
-}
-
-a:hover, a:active {
-  background-color: transparent;
-  color: #4296d1;
-}
-
-::-webkit-scrollbar {
-  width: 5px;
-}
-
-::-webkit-scrollbar-track {
-  background: #11151f; 
-}
- 
-::-webkit-scrollbar-thumb {
-  background: #253d74; 
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #253d74; 
-}
+    display: block;
+    border: none;
+    appearance: none;
+    border:0px;
+    outline:0px;
+    color: #D9D9D9;
+    background-color: #385cb1;
+    border: 2px solid black;
+    padding: 11px 35px;
+    font-family: ArimoSemiBold;
+    margin-top: 10px;
+    border-radius: 5px;
+    margin-bottom: 0.5em;
+    margin-left: 0%;
+    margin-right: 90px;
+    text-shadow: 2px 2px 4px #0000005b;
+    box-shadow: 1px 2px 10px #08395c;
+    border-color: #385cb1;
+    font-size: 14px;
+    opacity: 1;
+  }
