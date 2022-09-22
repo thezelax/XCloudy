@@ -1,0 +1,61 @@
+/* Include Fonts */
+@font-face {
+    font-family: QuicksandBold;
+    src: url(../font/QuicksandBold.woff);
+}
+
+@font-face {
+    font-family: Quicksand;
+    src: url(../font/Quicksand.woff);
+}
+
+@font-face {
+    font-family: ArimoSemiBold;
+    src: url(../font/ArimoSemiBold.woff);
+}
+
+@font-face {
+    font-family: GothamPro-Black;
+    src: url(../font/GothamPro-Black.woff);
+}
+
+@font-face {
+    font-family: GothamPro-BlackItalic;
+    src: url(../font/GothamPro-BlackItalic.woff);
+}
+
+@font-face {
+    font-family: GothamPro-Bold;
+    src: url(../font/GothamPro-Bold.woff);
+}
+
+@font-face {
+    font-family: GothamPro-Medium;
+    src: url(../font/GothamPro-Medium.woff);
+}
+
+@font-face {
+    font-family: GothamPro;
+    src: url(../font/GothamPro.woff);
+}
+
+/* Set Fonts */
+.font-GothamPro{
+    font-family: GothamPro;
+}
+
+.font-GothamProMedium{
+    font-family: GothamPro-Medium;
+}
+
+.font-GothamProBold{
+    font-family: GothamPro-Bold;
+}
+
+.font-GothamProBlackItalic{
+    font-family: GothamPro-BlackItalic;
+}
+
+.font-GothamProBlack{
+    font-family: GothamPro-Black;
+}
